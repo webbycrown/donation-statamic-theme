@@ -1,0 +1,45 @@
+tree:
+  -
+    entry: home
+  -
+    entry: home-two
+  -
+    entry: home-three
+  -
+    entry: help-me
+  -
+    entry: about-us
+  -
+    entry: donation
+  -
+    entry: donation-form
+  -
+    entry: donation-success
+  -
+    entry: news
+  -
+    entry: portfolio
+  -
+    entry: contact
+  -
+    entry: events
+  -
+    entry: volunteers
+  -
+    entry: become-volunteer
+  -
+    entry: career
+  -
+    entry: career-apply
+  -
+    entry: faq
+  -
+    entry: testimonials
+  -
+    entry: blog
+  -
+    entry: blog-grid
+  -
+    entry: latest-blog
+  -
+    entry: presentation

@@ -1,0 +1,6 @@
+<h2>New donation request</h2>
+{{ fields }}
+    {{ if value }}
+        <p><strong>{{ display }}:</strong><br>{{ value | sanitize | nl2br }}</p>
+    {{ /if }}
+{{ /fields }}

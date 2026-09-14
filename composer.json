@@ -1,0 +1,13 @@
+{
+    "name": "webbycrown/donation-statamic-theme",
+    "type": "statamic-starter-kit",
+    "description": "Charity starter kit with causes, donations, events, volunteers, news, and contact forms.",
+    "require": {
+        "statamic/cms": "*"
+    },
+    "extra": {
+        "statamic": {
+            "starter-kit": true
+        }
+    }
+}

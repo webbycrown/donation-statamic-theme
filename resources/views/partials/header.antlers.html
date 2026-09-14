@@ -1,0 +1,48 @@
+<!-- start-header -->
+<header id="header" class="d-flex align-items-center">
+    <div class="container p-0">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-lg-12 col-xl-12 col-6 no-caret-1 ">
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <div class="logo no-caret">
+                        <a href="/"><img src="{{ if transparent_header }}/assets/images/logo.png{{ else }}/assets/images/black-logo.png{{ /if }}" alt="Donation"></a>
+                    </div>
+                    {{ partial:partials/menu-svg }}
+                    <ul>
+                        {{ nav:header_menu }}
+                            {{ if children }}
+                            <li class="dropdown{{ if is_current || is_parent }} active{{ /if }}">
+                                <a href="{{ url ?? '#' }}"><span>{{ title }}</span> <i class="fa fa-chevron-down"></i></a>
+                                <ul>
+                                    {{ children }}
+                                    <li><a href="{{ url }}">{{ title }}</a></li>
+                                    {{ /children }}
+                                </ul>
+                            </li>
+                            {{ else }}
+                            <li><a class="nav-link scrollto{{ if is_current || is_parent }} active{{ /if }}" href="{{ url }}"{{ if is_current }} style="font-weight: 600;"{{ /if }}>{{ title }}</a></li>
+                            {{ /if }}
+                        {{ /nav:header_menu }}
+                    </ul>
+                    <div class="wc-btn">
+                        <a href="/donation" class="btn btn-primary">Donate</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-6 col-lg-3 col-xl-3 no-caret col-6">
+                <div class="logo no-caret-5">
+                    <a href="/"><img src="{{ if transparent_header }}/assets/images/logo.png{{ else }}/assets/images/black-logo.png{{ /if }}" alt="Donation"></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 col-xl-2 no-caret-2 col-6">
+                <div class="owl-toggle order-2">
+                    <a href="javascript:;" class="mobile-nav-toggle"><i class="fa fa-bars"></i><i class="fa fa-xmark"></i></a>
+                </div>
+                <div class="col-md-3 col-sm-5 d-block d-lg-none wc-btn outer-box">
+                    <a href="/donation" class="btn btn-primary">Donate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End Header -->

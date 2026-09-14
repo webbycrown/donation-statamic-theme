@@ -1,0 +1,28 @@
+<div class="main-wrapper">
+    <div class="page">
+        <section class="wc-news">
+            <div class="container p-0">
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <div class="news-title">
+                            <h2 data-aos="fade-down" data-aos-duration="1500">Latest News</h2>
+                            <p data-aos="fade-up" data-aos-duration="1500">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
+                        </div>
+                        <div class="news-wrapper">
+                            {{ collection:news sort="date:desc" }}
+                            <div class="news-content" data-aos="zoom-in" data-aos-duration="1500">
+                                <a href="{{ url }}"><img src="{{ if image }}{{ image }}{{ else }}/assets/images/news-1.png{{ /if }}" alt="{{ title }}"></a>
+                                <div class="date">
+                                    <p>{{ date format="d M,Y" }}</p>
+                                    <a href="{{ url }}"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                                <h2><a href="{{ url }}">{{ title }}</a></h2>
+                            </div>
+                            {{ /collection:news }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

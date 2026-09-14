@@ -1,0 +1,9 @@
+title: Contact
+honeypot: honeypot
+email:
+  -
+    to: donation39@gmail.com
+    cc: admin@example.com
+    reply_to: '{{ email }}'
+    subject: 'New Stay Connect message from {{ first_name }}'
+    html: emails/contact

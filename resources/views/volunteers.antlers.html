@@ -1,0 +1,241 @@
+<div class="main-wrapper">
+		<div class="page volunteers-page">
+
+
+			<!-- <===== Start-volunteers-section =====> -->
+
+			<section class="volunteers">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="volunteers-title">
+								<h2>volunteers</h2>
+								<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+									soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+									placeat facere possimus</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="volunteers-image-wrap">
+								<div class="volunteers-image-grid">
+									<img src="/assets/images/volunteers01.jpg" alt="">
+								</div>
+								<div class="volunteers-image-grid">
+									<img src="/assets/images/volunteers02.jpg" alt="">
+								</div>
+							</div>
+							<div class="volunteers-image-text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat in voluptate
+									velit esse cillum dolore eu fugiat nulla pariatur culpa qui officia deserunt mollit
+									anim id est laborum."
+								</p>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+									occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+									mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et
+									expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
+									nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+									assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+									debitis aut rerum saepe eveniet ut et voluptates repudiandae sint et molestiae non
+									recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+									voluptatibus maiores alias consequatur aut perferendis asperiores repellat."</p>
+
+							</div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="volunteers-team-title">
+								<h2>volunteers-Team</h2>
+								<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+									soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+									placeat facere possimus</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="volunteer-grid-wrapper spacing-margin">
+								{{ collection:volunteers sort="date:asc" as="people" }}
+								{{ people }}
+								<div class="volunteer-info js-volunteer-card{{ if count > 4 }} is-hidden{{ /if }}">
+									<a href="javascript:;" class="image-wrap">
+										<img src="{{ image:url ?? '/assets/images/volunteer-1.jpg' }}" alt="{{ title }}">
+									</a>
+									<div class="volunteer-content">
+										<h4><a href="javascript:;">{{ title }}</a></h4>
+										<p>{{ excerpt ?? 'Volunteer' }}</p>
+										{{ partial:partials/volunteer-social }}
+									</div>
+								</div>
+								{{ /people }}
+								{{ /collection:volunteers }}
+							</div>
+							{{ collection:volunteers as="people" }}
+							{{ if total_results > 4 }}
+							<div class="view-all-btn">
+								<a href="#" class="big-btn btn btn-primary mx-auto js-load-more" data-cards=".js-volunteer-card" data-batch="4">Load more <span class="loader-01"></span></a>
+							</div>
+							{{ /if }}
+							{{ /collection:volunteers }}
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid" style="background-color: #FFF8F8;">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 p-0">
+								<div class="people-says">
+									<h2>
+										People are says
+									</h2>
+									<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+										soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+										placeat facere possimus</p>
+								</div>
+
+
+								<!-- Swiper -->
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="people">
+												<div class="people-says-testimonial">
+													<div class="people-testimonial-box">
+														<div class="people-image">
+															<img src="/assets/images/people01.png" alt="">
+														</div>
+
+														<div class="people-testimonial">
+
+															<div class="people-image-grid">
+																<a href="javascript:;">Anand Shikandar</a>
+																<p>CEO, Manager</p>
+															</div>
+															<div class="people-quotes">
+																<div class="people-quotes-image">
+																	<img src="/assets/images/Vector (9).png" alt="">
+																</div>
+																<p>At vero eos et accusamus et iusto odio ducimus qui
+																	blanditiis
+																	praesentium
+																	voluptatum deleniti atque corrupti quos dolores et
+																	quas
+																	molestias
+																	excepturi
+																	sint occaecati cupiditate.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="people">
+												<div class="people-says-testimonial">
+													<div class="people-testimonial-box">
+														<div class="people-image">
+															<img src="/assets/images/people02.png" alt="">
+														</div>
+
+														<div class="people-testimonial">
+
+															<div class="people-image-grid">
+																<a href="javascript:;">Cherry Blossom</a>
+																<p>CEO, Manager</p>
+															</div>
+															<div class="people-quotes">
+																<div class="people-quotes-image">
+																	<img src="/assets/images/Vector (9).png" alt="">
+																</div>
+																<p>At vero eos et accusamus et iusto odio ducimus qui
+																	blanditiis
+																	praesentium
+																	voluptatum deleniti atque corrupti quos dolores et
+																	quas
+																	molestias
+																	excepturi
+																	sint occaecati cupiditate.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="people">
+												<div class="people-says-testimonial">
+													<div class="people-testimonial-box">
+														<div class="people-image">
+															<img src="/assets/images/people02.png" alt="">
+														</div>
+
+														<div class="people-testimonial">
+
+															<div class="people-image-grid">
+																<a href="javascript:;">Cherry Blossom</a>
+																<p>CEO, Manager</p>
+															</div>
+															<div class="people-quotes">
+																<div class="people-quotes-image">
+																	<img src="/assets/images/Vector (9).png" alt="">
+																</div>
+																<p>At vero eos et accusamus et iusto odio ducimus qui
+																	blanditiis
+																	praesentium
+																	voluptatum deleniti atque corrupti quos dolores et
+																	quas
+																	molestias
+																	excepturi
+																	sint occaecati cupiditate.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+							</div>
+							<div class="slider-arrow dark aos-init aos-animate people-btn" data-aos="fade-up"
+								data-aos-duration="1000">
+								<div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+									aria-controls="swiper-wrapper-b758e10378d89422b" aria-disabled="false"><svg
+										class="svg-inline--fa fa-arrow-left" aria-hidden="true" focusable="false"
+										data-prefix="fas" data-icon="arrow-left" role="img"
+										xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+										<path fill="currentColor"
+											d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z">
+										</path>
+									</svg>
+								</div>
+								<div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+									aria-controls="swiper-wrapper-b758e10378d89422b" aria-disabled="false"><svg
+										class="svg-inline--fa fa-arrow-right" aria-hidden="true" focusable="false"
+										data-prefix="fas" data-icon="arrow-right" role="img"
+										xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+										<path fill="currentColor"
+											d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z">
+										</path>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		</section>
+
+		<!-- <===== End-volunteers-section =====> -->
+
+	</div>

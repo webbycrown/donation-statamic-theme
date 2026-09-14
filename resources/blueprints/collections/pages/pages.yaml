@@ -1,0 +1,47 @@
+title: Pages
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: template
+          field:
+            type: template
+            display: Template
+        -
+          handle: body_class
+          field:
+            type: text
+            display: Body Class
+        -
+          handle: transparent_header
+          field:
+            type: toggle
+            display: Transparent Header
+        -
+          handle: show_loader
+          field:
+            type: toggle
+            display: Show Loader
+        -
+          handle: hide_footer
+          field:
+            type: toggle
+            display: Hide Footer
+        -
+          handle: header_style
+          field:
+            type: text
+            display: Header Style
+        -
+          handle: content
+          field:
+            type: bard
+            display: Content

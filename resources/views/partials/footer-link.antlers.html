@@ -1,0 +1,44 @@
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.mixitup.min.js"></script>
+<script src="/assets/js/waypoints.min.js"></script>
+<script src="/assets/js/jquery-ui.js"></script>
+<script src="/assets/js/jquery.ba-cond.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/all.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/assets/js/isotope.pkgd.min.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/donation-forms.js"></script>
+<script>
+(function () {
+    var hidden = false;
+    var started = Date.now();
+    function hideLoader() {
+        if (hidden) return;
+        var wait = Math.max(0, 400 - (Date.now() - started));
+        setTimeout(function () {
+            if (hidden) return;
+            hidden = true;
+            document.documentElement.classList.remove('page-loading');
+            if (document.body) document.body.classList.remove('page-loading');
+            var loader = document.querySelector('.screen-loader');
+            if (!loader) return;
+            loader.classList.add('is-done');
+            setTimeout(function () {
+                if (loader.parentNode) loader.parentNode.removeChild(loader);
+            }, 450);
+        }, wait);
+    }
+    if (document.readyState === 'complete') {
+        hideLoader();
+    } else {
+        window.addEventListener('load', hideLoader);
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(hideLoader, 700);
+        });
+    }
+    setTimeout(hideLoader, 3000);
+})();
+</script>

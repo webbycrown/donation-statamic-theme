@@ -1,0 +1,39 @@
+title: Career
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: image
+          field:
+            type: assets
+            display: Image
+            container: assets
+            max_files: 1
+        -
+          handle: excerpt
+          field:
+            type: textarea
+            display: Excerpt
+        -
+          handle: hours
+          field:
+            type: text
+            display: Hours
+        -
+          handle: schedule
+          field:
+            type: text
+            display: Schedule
+        -
+          handle: content
+          field:
+            type: bard
+            display: Content

@@ -1,0 +1,71 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: first_name
+          field:
+            type: text
+            display: First Name
+            validate:
+              - required
+        -
+          handle: last_name
+          field:
+            type: text
+            display: Last Name
+            validate:
+              - required
+        -
+          handle: email
+          field:
+            type: text
+            display: Email
+            validate:
+              - required
+        -
+          handle: amount
+          field:
+            type: text
+            display: Amount
+            validate:
+              - required
+        -
+          handle: payment_method
+          field:
+            type: text
+            display: Payment Method
+            validate:
+              - required
+        -
+          handle: donate_to
+          field:
+            type: text
+            display: Donate To
+        -
+          handle: occurrence
+          field:
+            type: text
+            display: Occurrence
+        -
+          handle: state
+          field:
+            type: text
+            display: State
+        -
+          handle: country
+          field:
+            type: text
+            display: Country
+        -
+          handle: zip
+          field:
+            type: text
+            display: Zip Code
+        -
+          handle: message
+          field:
+            type: textarea
+            display: Message

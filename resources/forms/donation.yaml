@@ -1,0 +1,9 @@
+title: Donation
+honeypot: honeypot
+email:
+  -
+    to: donation39@gmail.com
+    cc: admin@example.com
+    reply_to: '{{ email }}'
+    subject: 'New donation from {{ first_name }} {{ last_name }}'
+    html: emails/donation

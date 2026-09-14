@@ -1,0 +1,71 @@
+<div class="main-wrapper">
+         <div class="page contact-page">
+        <!-- <===== Start-contact-section =====> -->
+        <section class="wc-contact-us">
+            <div class="container p-0">
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <div class="wc-contact-wrapper">
+                            <div class="wc-contact-form">
+                                <h2 data-aos="fade-up" data-aos-duration="1500">Contact Us</h2>
+                                {{ form:contact action="/!/forms/contact" ajax="true" class="js-donation-form" }}
+                                <div class="contact-us-form stay-connect-form">
+                                    <div class="stay-connect-success" {{ unless success }}hidden{{ /unless }}>
+                                        <span class="stay-connect-success__icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                                        <h3>Message sent successfully</h3>
+                                        <p>Thank you for connecting with us. Our team has received your message and will get back to you shortly.</p>
+                                    </div>
+                                    <div class="stay-connect-fields" {{ if success }}hidden{{ /if }}>
+                                        <div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+                                        <input type="text" class="form-control" name="first_name" value="{{ old:first_name }}" placeholder="Name" required>
+                                        <input type="text" class="form-control" name="phone" value="{{ old:phone }}" placeholder="Phone">
+                                        <input type="email" class="form-control" name="email" value="{{ old:email }}" placeholder="Email" required>
+                                        <input type="text" class="form-control" name="subject" value="{{ old:subject }}" placeholder="Subject">
+                                        <textarea class="form-control" name="message" placeholder="Message">{{ old:message }}</textarea>
+                                        <div class="contact-form-button">
+                                            <button type="submit" class="btn btn-primary">
+                                                <span class="btn-label">Send</span>
+                                                <span class="btn-loading" hidden>Sending…</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ /form:contact }}
+                            </div>
+                            <div class="wc-address-form">
+                                <div class="contact-aside">
+                                    <h3>Get in touch</h3>
+                                    <p class="contact-aside__intro">Visit, call, or write to us. We usually reply within a day.</p>
+                                    <a class="contact-info-card" href="https://maps.google.com/?q=3+Longbranch+Court+Athens+GA+30605" target="_blank" rel="noopener">
+                                        <span class="contact-info-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+                                        <span class="contact-info-card__body">
+                                            <span class="contact-info-card__label">Address</span>
+                                            <span class="contact-info-card__text">3 Longbranch Court<br>Athens, GA 30605<br>United States</span>
+                                        </span>
+                                    </a>
+                                    <a class="contact-info-card" href="tel:+15246544954">
+                                        <span class="contact-info-card__icon"><i class="fa-solid fa-phone"></i></span>
+                                        <span class="contact-info-card__body">
+                                            <span class="contact-info-card__label">Call us</span>
+                                            <span class="contact-info-card__text">524 6544 954</span>
+                                        </span>
+                                    </a>
+                                    <a class="contact-info-card" href="mailto:donation39@gmail.com">
+                                        <span class="contact-info-card__icon"><i class="fa-solid fa-envelope"></i></span>
+                                        <span class="contact-info-card__body">
+                                            <span class="contact-info-card__label">Email</span>
+                                            <span class="contact-info-card__text">donation39@gmail.com</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-box">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" style="border:0;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+        <!-- <===== End-contact-section =====> -->

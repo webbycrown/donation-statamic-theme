@@ -1,0 +1,61 @@
+<div class="main-wrapper">
+        <div class="page   latest-blog-page">
+
+            <!-- <===== start latest-blog-section =====> -->
+            <!-- start-latest-blog -->
+            <section class="latest-blog latest-blog-second">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <div class="latest-blog-title spacing-margin latest-blog-center">
+                                <div class="title-wrap">
+                                    <h2 data-aos="fade-up" data-aos-duration="1500"
+                                        class="wc-sub-title aos-init aos-animate">Latest Blog</h2>
+                                    <p data-aos="fade-up" data-aos-duration="1500"
+                                        class="aos-init aos-animate half-width-p">Et harum quidem rerum facilis est et
+                                        expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+                                        cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row js-blog-list">
+                        {{ collection:blogs sort="date:desc" as="posts" }}
+                        {{ posts }}
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 js-blog-card{{ if count > 6 }} is-hidden{{ /if }}">
+                            <div class="latest-blog-info">
+                                <div class="latest-blog-wrap">
+                                    <div class="latest-blog-image">
+                                        <a href="{{ url }}">
+                                            <img src="{{ image:url ?? '/assets/images/latest-blog01.jpg' }}" alt="{{ title }}">
+                                        </a>
+                                    </div>
+                                    <div class="latets-blog-date">
+                                        <p>{{ date format="d M, Y" }}</p>
+                                        <a href="{{ url }}"><i class="fa fa-arrow-right"></i></a>
+                                    </div>
+                                    <h3><a href="{{ url }}">{{ title }}</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /posts }}
+                        {{ if total_results > 6 }}
+                        <div class="col-12">
+                            <div class="load-btn">
+                                <a href="#" class="big-btn btn btn-primary mx-auto js-blog-load-more js-load-more" data-cards=".js-blog-card" data-batch="2">load More<span
+                                        class="loader-01"></span></a>
+                            </div>
+                        </div>
+                        {{ /if }}
+                        {{ /collection:blogs }}
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- end-latest-blog -->
+
+
+        <!-- <===== end latest-blog-section =====> -->
+
+
+    </div>

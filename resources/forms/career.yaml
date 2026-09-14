@@ -1,0 +1,10 @@
+title: Career
+honeypot: honeypot
+email:
+  -
+    to: donation39@gmail.com
+    cc: admin@example.com
+    reply_to: '{{ email }}'
+    subject: 'Career application from {{ first_name }} {{ last_name }}'
+    html: emails/career
+    attachments: true

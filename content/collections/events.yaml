@@ -1,0 +1,12 @@
+title: Events
+template: events/show
+layout: layout
+revisions: false
+route: '/events/{slug}'
+sort_dir: asc
+date: true
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

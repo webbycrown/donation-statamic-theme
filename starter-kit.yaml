@@ -1,0 +1,15 @@
+title: Donation Theme
+user: webbycrown
+repo: webbycrown/donation-statamic-theme
+export_paths:
+  - routes
+  - content
+  - app/Http
+  - resources/blueprints
+  - resources/forms
+  - resources/fieldsets
+  - resources/users
+  - resources/views
+  - public/assets
+  - storage/forms
+  - README.md

@@ -1,0 +1,30 @@
+<div class="main-wrapper">
+    <div class="page event-page">
+        <section class="upcoming-events upcoming-events-second">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="events-title spacing-margin event-title-center">
+                            <h2 data-aos="fade-up" data-aos-duration="1500" class="wc-sub-title">Upcoming events</h2>
+                            <p data-aos="fade-up" data-aos-duration="1500">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words</p>
+                        </div>
+                        <div class="upcoming-events-wrapper spacing-margin">
+                            {{ collection:events }}
+                            <div class="events-info">
+                                <a href="{{ url }}" class="event-img">
+                                    <img src="{{ if image }}{{ image }}{{ else }}/assets/images/event-1.jpg{{ /if }}" alt="{{ title }}">
+                                </a>
+                                <div class="events-content">
+                                    <span class="date">{{ event_date ?? date format="d M,Y" }}</span>
+                                    <h4><a href="{{ url }}">{{ title }}</a></h4>
+                                    <a href="{{ url }}" class="btn btn-primary">View Events</a>
+                                </div>
+                            </div>
+                            {{ /collection:events }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

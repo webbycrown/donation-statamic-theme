@@ -1,0 +1,12 @@
+title: Portfolios
+template: portfolios/show
+layout: layout
+revisions: false
+route: '/portfolio/{slug}'
+sort_dir: desc
+date: true
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

@@ -1,0 +1,55 @@
+{{ form:career action="/!/forms/career" ajax="true" class="js-donation-form" }}
+<div class="stay-connect-success donation-form-success" {{ unless success }}hidden{{ /unless }}>
+    <span class="stay-connect-success__icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+    <h3>Application sent</h3>
+    <p>Thank you. We have received your career application and emailed our team.</p>
+</div>
+<div class="stay-connect-fields donation-information" {{ if success }}hidden{{ /if }}>
+    <div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+    <h3>Your Information</h3>
+    <input type="hidden" name="role" class="js-career-role" value="{{ old:role }}">
+    <input type="text" class="form-control" id="name" name="first_name" value="{{ old:first_name }}" placeholder="Name" required>
+    <input type="text" class="form-control" name="last_name" value="{{ old:last_name }}" placeholder="Last Name" required>
+    <input type="email" class="form-control" name="email" value="{{ old:email }}" placeholder="Email" required>
+    <div class="select-box">
+        <div class="custom-select">
+            <select name="state" required>
+                <option value="">State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Goa">Goa</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Sikkim">Sikkim</option>
+            </select>
+        </div>
+        <div class="custom-select">
+            <select name="country" required>
+                <option value="">Country</option>
+                <option value="India">India</option>
+                <option value="America">America</option>
+                <option value="Canada">Canada</option>
+            </select>
+        </div>
+        <input type="text" class="form-control" name="zip" value="{{ old:zip }}" placeholder="Zip code">
+    </div>
+    <div class="donation-Occurence career-apply-employment">
+        <h3>Employment Status</h3>
+        <label class="radio_btn">
+            <input type="radio" name="employment_status" value="Supervisor" checked>
+            <span class="list-item-label">Supervisor</span>
+        </label>
+        <label class="radio_btn">
+            <input type="radio" name="employment_status" value="Volunteer">
+            <span class="list-item-label">Volunteer</span>
+        </label>
+    </div>
+    <h3>Upload Your Resume</h3>
+    <input type="file" class="form-control js-career-resume" name="resume" accept=".pdf,.doc,.docx">
+    <div class="contact-form-button">
+        <button type="submit" class="btn btn-primary">
+            <span class="btn-label">Submit</span>
+            <span class="btn-loading" hidden>Sending…</span>
+        </button>
+    </div>
+</div>
+{{ /form:career }}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" class="page-loading">
+{{ partial:partials/head-link }}
+<body class="page-loading {{ body_class }}">
+    {{ partial:partials/loader }}
+    {{ if header_style == "three" }}
+        {{ partial:partials/header-three }}
+    {{ else }}
+        {{ partial:partials/header }}
+    {{ /if }}
+    {{ template_content }}
+    {{ unless hide_footer }}
+    {{ partial:partials/footer }}
+    {{ /unless }}
+    {{ partial:partials/footer-link }}
+</body>
+</html>

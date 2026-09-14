@@ -1,0 +1,6 @@
+<h2>New career application</h2>
+{{ fields }}
+    {{ if value && handle != "resume" }}
+        <p><strong>{{ display }}:</strong><br>{{ value | sanitize | nl2br }}</p>
+    {{ /if }}
+{{ /fields }}

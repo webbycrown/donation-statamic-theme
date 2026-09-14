@@ -1,0 +1,83 @@
+tree:
+  -
+    title: Home
+    url: /
+    children:
+      -
+        title: 'Home One'
+        url: /
+      -
+        entry: home-two
+      -
+        entry: home-three
+  -
+    title: About
+    url: /about-us
+    children:
+      -
+        entry: about-us
+      -
+        entry: help-me
+  -
+    title: Donation
+    url: /donation
+    children:
+      -
+        entry: donation
+      -
+        entry: donation-form
+      -
+        entry: donation-success
+  -
+    title: News
+    url: /news
+    children:
+      -
+        entry: news
+      -
+        title: 'News Details'
+        url: /news/clean-water-for-rural-schools
+  -
+    title: Portfolio
+    url: /portfolio
+    children:
+      -
+        entry: portfolio
+      -
+        title: 'Portfolio Details'
+        url: /portfolio/rural-children
+  -
+    title: Blog
+    url: /latest-blog
+    children:
+      -
+        entry: latest-blog
+      -
+        title: 'Blog Standard'
+        entry: blog
+      -
+        entry: blog-grid
+      -
+        title: 'Blog Detail'
+        url: /blog/why-we-keep-going
+  -
+    title: Pages
+    children:
+      -
+        entry: events
+      -
+        entry: volunteers
+      -
+        entry: become-volunteer
+      -
+        entry: career
+      -
+        entry: career-apply
+      -
+        entry: faq
+      -
+        entry: testimonials
+      -
+        entry: presentation
+  -
+    entry: contact

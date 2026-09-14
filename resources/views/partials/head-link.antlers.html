@@ -1,0 +1,335 @@
+<head>
+    <title>{{ title ?? site:name }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/images/Site-logo.png" rel="icon">
+    <style id="donation-loader-critical">
+        html.page-loading,
+        body.page-loading { background: #425f57; overflow: hidden; }
+        .screen-loader {
+            position: fixed !important;
+            inset: 0;
+            z-index: 99999;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            background: #425f57;
+            padding: 0 !important;
+            transition: opacity .4s ease, visibility .4s ease;
+        }
+        .screen-loader.is-done {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .screen-loader .loader-logo {
+            max-width: 240px;
+            width: 56%;
+            z-index: 2;
+            animation: donation-loader-pulse 1.2s ease-in-out infinite;
+        }
+        .screen-loader .loader-logo img { width: 100%; display: block; }
+        .screen-loader .loader-hero-left,
+        .screen-loader .loader-hero-right { position: absolute; pointer-events: none; }
+        .screen-loader .loader-hero-left { left: 0; top: 0; }
+        .screen-loader .loader-hero-right { right: 0; bottom: 0; }
+        @keyframes donation-loader-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(0.96); opacity: 0.82; }
+        }
+    </style>
+    <noscript>
+        <style>html.page-loading, body.page-loading { overflow: auto; background: #fff; } .screen-loader { display: none !important; }</style>
+    </noscript>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/aos.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.css">
+    <link href="/assets/css/aos.css" rel="stylesheet">
+    <link href="/assets/css/styles.css" rel="stylesheet">
+    <style id="donation-theme-fixes">
+        header#header .nav-link.active,
+        header#header .dropdown.active > a { font-weight: 600; }
+        body:not(.transperent) header#header .nav-link,
+        body:not(.transperent) header#header .dropdown > a { color: #1e1e1e; }
+        .contact-form-button button.btn { border: 0; cursor: pointer; }
+        .contact-us-form button.btn { border: 0; cursor: pointer; }
+        .page { margin-bottom: 0 !important; }
+        .wc-contactus { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+        .wc-contact { padding: 48px 0 36px !important; }
+        .wc-contact .contact-title { padding-bottom: 28px; }
+        .wc-contactus-sec { padding-top: 20px; }
+        footer.footer,
+        footer.footer-two { margin-top: 0 !important; }
+        .stay-connect-success {
+            text-align: center;
+            background: #fff;
+            border: 1px solid rgba(66, 95, 87, 0.12);
+            border-radius: 32px;
+            padding: 40px 32px;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+        .stay-connect-success__icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: #CFFF8D;
+            color: #425F57;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        .stay-connect-success h3 {
+            font-size: 28px;
+            color: #425F57;
+            margin-bottom: 10px;
+        }
+        .stay-connect-success p {
+            color: #5a6b66;
+            margin: 0;
+            max-width: none;
+        }
+        .stay-connect-alert--error {
+            background: #fff1f1;
+            color: #b42318;
+            border-radius: 16px;
+            padding: 12px 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .contact-form-button .btn.is-loading,
+        .contact-us-form .btn.is-loading,
+        .personal-info .btn.is-loading {
+            opacity: 0.75;
+            pointer-events: none;
+        }
+        .personal-info .wc-btn button.btn,
+        .wc-donation-form .contact-form-button button.btn {
+            border: 0;
+            cursor: pointer;
+        }
+        .donation-form-success {
+            background: #fff;
+            margin: 0 auto;
+            max-width: 620px;
+            width: 100%;
+            padding: 48px 40px;
+        }
+        .wc-donation .donation-inner-box:has(.donation-form-success:not([hidden])),
+        .wc-donation .donation-inner-box.is-success {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 460px;
+            text-align: center;
+        }
+        .wc-donation .donation-inner-box form.js-donation-form {
+            width: 100%;
+        }
+        .wc-donation .donation-inner-box .stay-connect-fields h2 {
+            font-size: 24px;
+            color: #DFFFFF;
+            padding-bottom: 30px;
+        }
+        .wc-amount a.is-active p {
+            background: #CFFF8D;
+            color: #425F57;
+        }
+        .wc-contact-us .wc-address-form {
+            display: flex;
+            align-items: center;
+            padding: 72px 48px;
+        }
+        .contact-aside { width: 100%; }
+        .contact-aside h3 {
+            color: #CFFF8D;
+            font-size: 28px;
+            margin: 0 0 8px;
+        }
+        .contact-aside__intro {
+            color: #DFFFFF;
+            opacity: 0.88;
+            margin: 0 0 28px;
+            font-size: 15px;
+            line-height: 1.5;
+            max-width: none;
+        }
+        .contact-info-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            width: 100%;
+            background: #FFF8F8;
+            border-radius: 24px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .contact-info-card:last-child { margin-bottom: 0; }
+        .contact-info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .contact-info-card__icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: #CFFF8D;
+            color: #425F57;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 16px;
+        }
+        .contact-info-card__label {
+            display: block;
+            font-size: 12px;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: #6b8079;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        .contact-info-card__text {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.45;
+            color: #425F57;
+            word-break: break-word;
+        }
+        .contact-info-card:hover .contact-info-card__text {
+            color: #2f4540;
+        }
+        @media (max-width: 991px) {
+            .wc-contact-us .wc-address-form { padding: 40px 24px; }
+        }
+        .js-career-card.is-hidden,
+        .js-blog-card.is-hidden,
+        .js-prebuild-card.is-hidden,
+        .js-inner-page-card.is-hidden,
+        .js-portfolio-card.is-hidden,
+        .js-testimonial-card.is-hidden,
+        .js-volunteer-card.is-hidden,
+        .js-blog-standard-card.is-hidden,
+        .js-blog-grid-card.is-hidden { display: none !important; }
+        .testimonial-three .testimonial-wrap {
+            flex-wrap: wrap;
+        }
+        .testimonial-three .testimonial-wrap .testimonial-left {
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+        }
+        .blog-standard .blog-standard-wrap {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .blog-standard .blog-standard-wrap .latest-blog-three-info {
+            flex: 1 1 calc(50% - 15px);
+            max-width: calc(50% - 15px);
+        }
+        .blog-grid .latest-blog-slider {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .blog-grid .latest-blog-slider .blog-info {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+        }
+        @media (max-width: 991px) {
+            .testimonial-three .testimonial-wrap .testimonial-left,
+            .blog-standard .blog-standard-wrap .latest-blog-three-info,
+            .blog-grid .latest-blog-slider .blog-info {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+        .wc-portfolio .portfolio-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            grid-column-gap: 25px !important;
+            grid-row-gap: 25px !important;
+            align-items: stretch;
+        }
+        .wc-portfolio .portfolio-grid .portfolio-content,
+        .wc-portfolio .portfolio-grid .portfolio-content:nth-child(n) {
+            grid-column: auto !important;
+            grid-row: auto !important;
+            width: 100% !important;
+            max-width: none !important;
+            height: auto !important;
+            margin: 0 !important;
+        }
+        .wc-portfolio .portfolio-grid .portfolio-content .potfolio-img {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        .wc-portfolio .portfolio-grid .portfolio-content .potfolio-img a {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+        }
+        .wc-portfolio .portfolio-grid .portfolio-content .potfolio-img img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center;
+            display: block;
+        }
+        @media (max-width: 991px) {
+            .wc-portfolio .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        }
+        @media (max-width: 575px) {
+            .wc-portfolio .portfolio-grid { grid-template-columns: 1fr !important; }
+        }
+        .js-load-more .loader-01,
+        .js-blog-load-more .loader-01,
+        .js-career-load-more .loader-01,
+        .js-prebuild-load-more .loader-01,
+        .js-inner-page-load-more .loader-01,
+        .js-portfolio-load-more .loader-01 {
+            display: none;
+            animation: none;
+        }
+        .js-load-more.is-loading .loader-01,
+        .js-blog-load-more.is-loading .loader-01,
+        .js-career-load-more.is-loading .loader-01,
+        .js-prebuild-load-more.is-loading .loader-01,
+        .js-inner-page-load-more.is-loading .loader-01,
+        .js-portfolio-load-more.is-loading .loader-01 {
+            display: inline-block;
+            vertical-align: middle;
+            animation: 1s loader-01 linear infinite;
+        }
+        .Prebuild-image { display: block; }
+        .view-blog-image { display: block; }
+        @media (min-width: 1200px) {
+            .navbar li { margin-right: 20px; }
+        }
+        .career-apply-form .contact-form-button button.btn {
+            border: 0;
+            cursor: pointer;
+        }
+        .career-apply-form .js-career-resume {
+            padding: 12px 16px;
+            min-height: 48px;
+            margin-bottom: 18px;
+        }
+        .career-apply-popup .donation-form-success {
+            margin: 20px auto;
+        }
+    </style>
+</head>

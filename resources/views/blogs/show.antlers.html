@@ -1,0 +1,108 @@
+<div class="main-wrapper">
+        <div class="page  blog-details-page">
+
+            <!-- start-blog-details -->
+            <section class="blog-details">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="blog-details-title">
+                                <h3>{{ title }}</h3>
+                                <p>{{ date format="d M, Y" }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <div class="blog-detail-section">
+                                <div class="blog-details-image">
+                                    <img src="{{ image:url ?? '/assets/images/blog-details01.jpg' }}" alt="{{ title }}">
+                                </div>
+                                <div class="blog-details-text">
+                                    {{ if content }}
+                                        {{ content }}
+                                    {{ elseif excerpt }}
+                                        <p>{{ excerpt }}</p>
+                                    {{ /if }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="second-para">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                    qui officia deserunt mollit anim id est laborum.</p>
+                                <p>We denounce with righteous indignation and dislike men who are so beguiled and
+                                    demoralized by the charms of pleasure of the moment, so blinded by desire, that they
+                                    cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs
+                                    to those who fail in their duty through weakness of will, which is the same as
+                                    saying through shrinking from toil and pain. These cases are perfectly simple and
+                                    easy to distinguish.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="blog-detail-quotes">
+                                <div class="blog-detail-quotes-wrap">
+                                    <img src="/assets/images/quetation.png" alt="../">
+                                    <h4>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa
+                                        qui officia</h4>
+                                </div>
+                                <p>- Jon Rose</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="blog-detail-image-wrap">
+                                <div class="blog-detail-image-grid">
+                                    <img src="/assets/images/blog-detail01.jpg" alt="">
+                                </div>
+                                <div class="blog-detail-image-grid">
+                                    <img src="/assets/images/blog-detail02.jpg" alt="">
+                                </div>
+                                <div class="blog-detail-image-grid">
+                                    <img src="/assets/images/blog-detail03.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="blog-detail-grid-para">
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum is that
+                                    it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                                    here, content here', making it look like readable English</p>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+                                    qui ratione voluptatem sequi nesciunt.</p>
+                                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                                    soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+                                    placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                                <div class="social-icon">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </section>
+
+            <!-- end-blog-details -->
+        </div>
+
+    </div>
