@@ -1,1 +1,1 @@
-{{ if src | starts_with('http') }}{{ src }}{{ elseif src }}{{ src }}{{ else }}{{ url }}{{ /if }}
+{{ if file }}{{ if file | contains:assets }}{{ file }}{{ else }}/assets/{{ file }}{{ /if }}{{ elseif fallback }}/assets/{{ fallback }}{{ /if }}

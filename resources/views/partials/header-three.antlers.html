@@ -19,7 +19,7 @@
             </div>
             <div class="col-lg-2 col-4">
                 <a href="/" class="header-logo-three">
-                    <img src="{{ global:setting_logo ?? '/assets/images/logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                    <img src="{{ partial:partials/media-url :file="global:setting_logo" fallback="images/logo.png" }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
                 </a>
             </div>
             <div class="col-lg-5 col-4">

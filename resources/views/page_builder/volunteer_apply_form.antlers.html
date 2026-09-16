@@ -27,7 +27,7 @@
                 <div class="become-contact">
                     <div class="become-contact-info">
                         <h2>{{ heading ?? 'Become a volunteer' }}</h2>
-                        {{ form:volunteer action="/!/forms/volunteer" ajax="true" class="js-donation-form" }}
+                        {{ form:volunteer action="/!/forms/volunteer" class="js-donation-form" }}
                         <div class="stay-connect-success donation-form-success" {{ unless success }}hidden{{ /unless }}>
                             <span class="stay-connect-success__icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
                             <h3>Request sent</h3>

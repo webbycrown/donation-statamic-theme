@@ -55,6 +55,10 @@ Available sections:
 
 ---
 
+## Third-party assets
+
+Bundled front-end libraries, fonts, and sample imagery are listed in [THIRD_PARTY.md](THIRD_PARTY.md).
+
 ## Installation
 
 Install this kit from the [Statamic Marketplace](https://statamic.com/starter-kits) or via the CLI:

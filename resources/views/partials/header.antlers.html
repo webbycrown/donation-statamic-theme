@@ -7,9 +7,9 @@
                     <div class="logo no-caret">
                         <a href="/">
                             {{ if transparent_header }}
-                            <img src="{{ global:setting_logo ?? '/assets/images/logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                            <img src="{{ partial:partials/media-url :file="global:setting_logo" fallback="images/logo.png" }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
                             {{ else }}
-                            <img src="{{ global:setting_logo_dark ?? global:setting_logo ?? '/assets/images/black-logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                            <img src="{{ partial:partials/media-url :file="global:setting_logo_dark ?? global:setting_logo" fallback="images/black-logo.png" }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
                             {{ /if }}
                         </a>
                     </div>
@@ -39,9 +39,9 @@
                 <div class="logo no-caret-5">
                     <a href="/">
                         {{ if transparent_header }}
-                        <img src="{{ global:setting_logo ?? '/assets/images/logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                        <img src="{{ partial:partials/media-url :file="global:setting_logo" fallback="images/logo.png" }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
                         {{ else }}
-                        <img src="{{ global:setting_logo_dark ?? global:setting_logo ?? '/assets/images/black-logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                        <img src="{{ partial:partials/media-url :file="global:setting_logo_dark ?? global:setting_logo" fallback="images/black-logo.png" }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
                         {{ /if }}
                     </a>
                 </div>

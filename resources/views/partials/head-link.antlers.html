@@ -6,7 +6,7 @@
     {{ if seo_keywords }}<meta name="keywords" content="{{ seo_keywords }}">{{ elseif global:setting_seo_keywords }}<meta name="keywords" content="{{ global:setting_seo_keywords }}">{{ /if }}
     {{ if seo_canonical }}<link rel="canonical" href="{{ seo_canonical }}">{{ /if }}
     {{ if seo_robots }}<meta name="robots" content="{{ seo_robots }}">{{ /if }}
-    <link href="{{ global:setting_favicon ?? '/assets/images/Site-logo.png' }}" rel="icon">
+    <link href="{{ partial:partials/media-url :file="global:setting_favicon" fallback="images/Site-logo.png" }}" rel="icon">
     <style id="donation-loader-critical">
         html.page-loading,
         body.page-loading { background: #425f57; overflow: hidden; }
