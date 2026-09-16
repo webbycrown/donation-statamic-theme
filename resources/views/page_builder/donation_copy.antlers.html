@@ -1,0 +1,13 @@
+<!-- Donation copy -->
+<div class="main-donation-wrapper">
+    <div class="wc-donation-content">
+        {{ if body }}
+        <div class="donation-content-p">{{ body }}</div>
+        {{ /if }}
+        {{ if image }}
+        <div class="donation-child-img">
+            <img src="{{ image:url }}" alt="Donation" data-aos="fade-up" data-aos-duration="3000">
+        </div>
+        {{ /if }}
+    </div>
+</div>

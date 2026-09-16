@@ -1,0 +1,19 @@
+<!-- Portfolio gallery (chariti strip) -->
+<div class="wc-chariti">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="project-img">
+                    {{ collection:portfolios sort="date:desc" limit="6" }}
+                    <div class="charities-img">
+                        <img src="{{ image:url ?? '/assets/images/gallery-1.png' }}" alt="{{ title }}">
+                        {{ if show_instagram_icon }}
+                        <div class="icon"><a href="{{ url }}"><i class="fab fa-instagram"></i></a></div>
+                        {{ /if }}
+                    </div>
+                    {{ /collection:portfolios }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

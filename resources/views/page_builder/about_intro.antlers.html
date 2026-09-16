@@ -1,0 +1,29 @@
+<!-- About intro -->
+<section class="about-us" style="background-color: #FFF8F8;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if heading }}<h2 class="title" data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+            </div>
+            <div class="col-lg-7 col-md-6">
+                <div class="about-content">
+                    {{ if text_col_one }}{{ text_col_one }}{{ /if }}
+                    {{ if button_label }}
+                    <div class="about-btn" data-aos="fade-up" data-aos-duration="1500">
+                        <a href="{{ button_url ?? '/about-us' }}" class="btn btn-primary">{{ button_label }}</a>
+                    </div>
+                    {{ /if }}
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6">
+                <div class="about-image">
+                    {{ if image }}
+                    <img src="{{ image:url }}" alt="{{ heading }}">
+                    {{ else }}
+                    <img src="/assets/images/about.png" alt="About us">
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

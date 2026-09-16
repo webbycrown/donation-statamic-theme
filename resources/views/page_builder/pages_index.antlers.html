@@ -1,0 +1,22 @@
+<!-- Pages index -->
+<section class="pages-index" style="padding: 60px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                {{ if heading }}<h2 class="wc-sub-title text-center" data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+            </div>
+        </div>
+        <div class="row" style="margin-top:40px;">
+            {{ collection:pages }}
+            {{ if slug != "home" && slug != "home-two" && slug != "home-three" }}
+            <div class="col-sm-12 col-md-6 col-lg-4 js-inner-page-card{{ if count > 9 }} is-hidden{{ /if }}" data-aos="fade-up">
+                <div class="lets-wrap">
+                    <h6><a href="{{ url }}">{{ title }}</a></h6>
+                </div>
+            </div>
+            {{ /if }}
+            {{ /collection:pages }}
+        </div>
+    </div>
+</section>

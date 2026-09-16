@@ -1,0 +1,15 @@
+<!-- Volunteer CTA -->
+<section class="become" style="background-color: #FFF8F8; padding: 60px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</p>{{ /if }}
+                {{ if heading }}<h2 data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+                {{ if text }}<p data-aos="fade-up" data-aos-duration="1500" class="mx-auto" style="max-width:640px;">{{ text }}</p>{{ /if }}
+                <div class="wc-btn" data-aos="zoom-in" data-aos-duration="1500" style="margin-top:28px;">
+                    <a href="{{ button_url ?? '/become-volunteer' }}" class="btn btn-primary">{{ button_label ?? 'Become a volunteer' }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

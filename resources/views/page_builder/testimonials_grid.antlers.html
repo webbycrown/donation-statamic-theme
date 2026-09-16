@@ -1,0 +1,46 @@
+<!-- Testimonials grid -->
+<div class="page testimonial-page">
+    <section class="testimonial-three testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                    <div class="testimonial-title">
+                        {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="testimonial-wrap testimonial-second-wrap">
+                        {{ collection:testimonials sort="date:asc" as="quotes" }}
+                        {{ quotes }}
+                        <div class="testimonial-left js-testimonial-card{{ if count > 4 }} is-hidden{{ /if }}">
+                            <div class="testimonial-quotes">
+                                <img src="/assets/images/Vector (9).png" alt="">
+                            </div>
+                            <p>{{ content | strip_tags | truncate:260 }}</p>
+                            <a href="javascript:;">{{ title }}</a>
+                            <div class="testimonial-second-image">
+                                <img src="{{ image:url ?? '/assets/images/testimonial01.png' }}" alt="{{ title }}">
+                            </div>
+                        </div>
+                        {{ /quotes }}
+                        {{ /collection:testimonials }}
+                    </div>
+                </div>
+            </div>
+            {{ collection:testimonials as="quotes" }}
+            {{ if total_results > 4 }}
+            <div class="row">
+                <div class="col-12">
+                    <div class="view-all-btn">
+                        <a href="#" class="big-btn btn btn-primary mx-auto js-load-more" data-cards=".js-testimonial-card" data-batch="2">Load more <span class="loader-01"></span></a>
+                    </div>
+                </div>
+            </div>
+            {{ /if }}
+            {{ /collection:testimonials }}
+        </div>
+    </section>
+</div>

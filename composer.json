@@ -3,7 +3,7 @@
     "type": "statamic-starter-kit",
     "description": "Charity starter kit with causes, donations, events, volunteers, news, and contact forms.",
     "require": {
-        "statamic/cms": "*"
+        "statamic/cms": "^5.0"
     },
     "extra": {
         "statamic": {

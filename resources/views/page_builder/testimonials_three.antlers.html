@@ -1,0 +1,31 @@
+<!-- Testimonials (home three) -->
+<section class="testimonial-three">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                <div class="testimonial-title">
+                    {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="testimonial-wrap">
+                    {{ collection:testimonials sort="date:asc" limit="4" }}
+                    <div class="testimonial-left">
+                        <div class="testimonial-quotes">
+                            <img src="/assets/images/Vector (9).png" alt="">
+                        </div>
+                        <p>{{ content | strip_tags | truncate:260 }}</p>
+                        <a href="javascript:;">{{ title }}</a>
+                        <div class="testimonial-second-image">
+                            <img src="{{ image:url ?? '/assets/images/testimonial01.png' }}" alt="{{ title }}">
+                        </div>
+                    </div>
+                    {{ /collection:testimonials }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

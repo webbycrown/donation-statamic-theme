@@ -1,0 +1,18 @@
+title: Settings
+data:
+  site_name: Donation
+  setting_phone: '+1 524 654 4954'
+  setting_email: donation39@gmail.com
+  setting_address: "3 Longbranch Court\nAthens, GA 30605\nUnited States"
+  setting_map_embed: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621'
+  cta_label: Donate
+  cta_url: /donation
+  facebook: 'https://www.facebook.com/'
+  instagram: 'https://www.instagram.com/'
+  twitter: 'https://twitter.com/'
+  footer_description: All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.
+  copyright: '© 2024 Donation. All rights reserved.'
+  terms_url: '#'
+  legal_url: '#'
+  seo_description: A charity theme built for causes, donations, events, volunteers, news, and contact forms.
+  seo_keywords: donation, charity, causes, volunteers, events

@@ -1,0 +1,24 @@
+<!-- Why choose us -->
+<section class="why-choose" style="padding: 80px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                {{ if heading }}<h2 class="wc-sub-title text-center" data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+            </div>
+        </div>
+        {{ if items }}
+        <div class="row" style="margin-top:40px;">
+            {{ items }}
+            <div class="col-xl-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="1500">
+                <div class="why-choose-item" style="text-align:center; padding:32px 24px; margin-bottom:24px;">
+                    {{ if icon }}<i class="{{ icon }}" style="font-size:36px; color:#425F57; margin-bottom:16px; display:block;"></i>{{ /if }}
+                    {{ if heading }}<h4>{{ heading }}</h4>{{ /if }}
+                    {{ if text }}<p>{{ text }}</p>{{ /if }}
+                </div>
+            </div>
+            {{ /items }}
+        </div>
+        {{ /if }}
+    </div>
+</section>

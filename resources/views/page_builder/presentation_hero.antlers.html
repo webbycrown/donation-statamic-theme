@@ -1,0 +1,35 @@
+<!-- Presentation hero -->
+<div class="page presentation-page">
+    <section id="hero" class="hero-section wc-one-page-hero d-flex presentation-page">
+        <div class="hero-main">
+            <svg width="204" height="417" viewBox="0 0 204 417" fill="none" class="Hero_svg_" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M187.511 230.298C184.887 277.513 204.676 329.622 174.658 366.154C143.169 404.475 88.2366 406.971 38.8285 411.245C-17.343 416.105 -76.8719 424.699 -122.721 391.88C-175.004 354.457 -227.653 293.128 -213.962 230.298C-200.562 168.801 -111.694 168.633 -64.9054 126.544C-23.3267 89.1412 -16.1282 13.2408 38.8285 2.89768C96.576 -7.97071 158.489 29.2587 190.65 78.4468C219.45 122.495 190.432 177.748 187.511 230.298Z" stroke="#CFFF8D" stroke-opacity="0.3" stroke-width="0.5"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wc-hero">
+                        {{ if heading }}<h1 class="presentation-title">{{ heading }}</h1>{{ /if }}
+                        <div class="wc-btn">
+                            <a href="{{ button_url ?? '#prebuild' }}" class="btn btn-primary">{{ button_label ?? 'Explore now' }}</a>
+                            {{ if video_url }}
+                            <button class="btn btn-outline-primary lets-play btn-watch-video" data-video="{{ video_url }}">View Demo</button>
+                            {{ /if }}
+                        </div>
+                    </div>
+                    {{ if image }}
+                    <div class="wc-img" data-aos="zoom-in" data-aos-duration="2000">
+                        {{ if video_url }}
+                        <button class="mouse-scroll lets-play btn-watch-video presentation-play-btn" data-video="{{ video_url }}" data-aos="fade-up" data-aos-duration="1500">
+                            <span class="mouse"><i class="fa fa-play"></i></span>
+                        </button>
+                        {{ /if }}
+                        <img src="{{ image:url }}" class="presentation-title-image" alt="{{ heading }}">
+                    </div>
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

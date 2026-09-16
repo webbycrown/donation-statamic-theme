@@ -1,0 +1,74 @@
+<!-- Volunteer apply form — wired to {{ form:volunteer }} -->
+<section class="become">
+    <div class="container">
+        {{ if heading || intro }}
+        <div class="row">
+            <div class="col-12">
+                <div class="become-volunteer-title">
+                    {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                    {{ if intro }}{{ intro }}{{ /if }}
+                </div>
+            </div>
+        </div>
+        {{ /if }}
+        {{ if image }}
+        <div class="row">
+            <div class="col-12">
+                <div class="become-volunteer">
+                    <div class="become-volunteer-image">
+                        <img src="{{ image:url }}" alt="{{ heading }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ /if }}
+        <div class="row">
+            <div class="col-12">
+                <div class="become-contact">
+                    <div class="become-contact-info">
+                        <h2>{{ heading ?? 'Become a volunteer' }}</h2>
+                        {{ form:volunteer action="/!/forms/volunteer" ajax="true" class="js-donation-form" }}
+                        <div class="stay-connect-success donation-form-success" {{ unless success }}hidden{{ /unless }}>
+                            <span class="stay-connect-success__icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                            <h3>Request sent</h3>
+                            <p>Thank you. We have received your volunteer application and will be in touch soon.</p>
+                        </div>
+                        <div class="stay-connect-fields" {{ if success }}hidden{{ /if }}>
+                            <div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+                            <div class="contact-info">
+                                <input type="text" class="form-control" name="first_name" value="{{ old:first_name }}" placeholder="Name" required>
+                            </div>
+                            <div class="contact-info">
+                                <input type="email" class="form-control" name="email" value="{{ old:email }}" placeholder="Email" required>
+                            </div>
+                            <div class="contact-info">
+                                <textarea class="form-control" name="message" placeholder="Message">{{ old:message }}</textarea>
+                            </div>
+                            <div class="become-contact-btn">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="btn-label">Send Request</span>
+                                    <span class="btn-loading" hidden>Sending…</span>
+                                </button>
+                            </div>
+                        </div>
+                        {{ /form:volunteer }}
+                    </div>
+                    {{ if quote }}
+                    <div class="become-contact-thought">
+                        <div class="become-contact-thought-inner">
+                            <h6>"{{ quote }}"</h6>
+                            {{ if quote_image }}
+                            <div class="contact-image">
+                                <img src="{{ quote_image:url }}" alt="{{ quote_author }}">
+                            </div>
+                            {{ /if }}
+                            {{ if quote_author }}<a href="#">{{ quote_author }}</a>{{ /if }}
+                            {{ if quote_role }}<p>{{ quote_role }}</p>{{ /if }}
+                        </div>
+                    </div>
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,153 @@
+title: Settings
+tabs:
+  main:
+    display: Site
+    sections:
+      -
+        display: Identity
+        fields:
+          -
+            handle: site_name
+            field:
+              type: text
+              display: Site name
+          -
+            handle: logo
+            field:
+              type: assets
+              display: Logo (light/transparent header)
+              container: assets
+              max_files: 1
+          -
+            handle: logo_dark
+            field:
+              type: assets
+              display: Logo (dark header)
+              container: assets
+              max_files: 1
+          -
+            handle: footer_logo
+            field:
+              type: assets
+              display: Footer logo
+              container: assets
+              max_files: 1
+          -
+            handle: favicon
+            field:
+              type: assets
+              display: Favicon
+              container: assets
+              max_files: 1
+      -
+        display: Contact
+        fields:
+          -
+            handle: setting_phone
+            field:
+              type: text
+              display: Phone number
+          -
+            handle: setting_email
+            field:
+              type: text
+              display: Email
+          -
+            handle: setting_address
+            field:
+              type: textarea
+              display: Address
+          -
+            handle: setting_map_embed
+            field:
+              type: text
+              display: Map embed URL
+              instructions: Paste the src URL from a Google Maps embed iframe.
+      -
+        display: Header CTA
+        fields:
+          -
+            handle: cta_label
+            field:
+              type: text
+              display: Donate button label
+              default: Donate
+          -
+            handle: cta_url
+            field:
+              type: text
+              display: Donate button URL
+              default: /donation
+      -
+        display: Social media
+        fields:
+          -
+            handle: facebook
+            field:
+              type: text
+              display: Facebook URL
+          -
+            handle: twitter
+            field:
+              type: text
+              display: Twitter / X URL
+          -
+            handle: instagram
+            field:
+              type: text
+              display: Instagram URL
+          -
+            handle: linkedin
+            field:
+              type: text
+              display: LinkedIn URL
+          -
+            handle: youtube
+            field:
+              type: text
+              display: YouTube URL
+      -
+        display: Footer
+        fields:
+          -
+            handle: footer_description
+            field:
+              type: textarea
+              display: Footer description
+          -
+            handle: copyright
+            field:
+              type: text
+              display: Copyright text
+          -
+            handle: terms_url
+            field:
+              type: text
+              display: Terms URL
+          -
+            handle: legal_url
+            field:
+              type: text
+              display: Legal URL
+  seo:
+    display: SEO defaults
+    sections:
+      -
+        fields:
+          -
+            handle: seo_description
+            field:
+              type: textarea
+              display: Default meta description
+          -
+            handle: seo_keywords
+            field:
+              type: text
+              display: Default keywords
+          -
+            handle: seo_image
+            field:
+              type: assets
+              display: Default share image
+              container: assets
+              max_files: 1

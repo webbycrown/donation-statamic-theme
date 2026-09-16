@@ -1,20 +1,31 @@
-<!-- <!=== start-footer-section =====> -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 p-0">
-                            <div class="footer-content">    
-                                <a href="/" class="logo"><img src="/assets/images/footer-logo.png" alt="../"></a>
-                                <P>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary</P>
-                                <div class="footer-copyright"><a href="#" style="margin-right: 10px;">@ 2022 Donation camp</a>/<a href="#" style="margin-right: 10px; margin-left:10px">Terms Of Site</a>/<a href="#" style="margin-right: 10px; margin-left:10px">Legal</a></div>
-                                <div class="social-icon">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
+<!-- start-footer-section -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="footer-content">
+                    <a href="/" class="logo">
+                        <img src="{{ global:setting_footer_logo ?? global:setting_logo ?? '/assets/images/footer-logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                    </a>
+                    {{ if global:setting_footer_description }}
+                    <p>{{ global:setting_footer_description }}</p>
+                    {{ else }}
+                    <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+                    {{ /if }}
+                    <div class="footer-copyright">
+                        <a href="{{ global:setting_terms_url ?? '#' }}" style="margin-right: 10px;">{{ global:setting_copyright ?? '© 2024 Donation' }}</a>
+                        {{ if global:setting_terms_url }}<a href="{{ global:setting_terms_url }}" style="margin-right: 10px; margin-left:10px">Terms Of Site</a>{{ /if }}
+                        {{ if global:setting_legal_url }}<a href="{{ global:setting_legal_url }}" style="margin-right: 10px; margin-left:10px">Legal</a>{{ /if }}
+                    </div>
+                    <div class="social-icon">
+                        {{ if global:setting_facebook }}<a href="{{ global:setting_facebook }}" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>{{ /if }}
+                        {{ if global:setting_instagram }}<a href="{{ global:setting_instagram }}" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>{{ /if }}
+                        {{ if global:setting_twitter }}<a href="{{ global:setting_twitter }}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>{{ /if }}
+                        {{ if global:setting_linkedin }}<a href="{{ global:setting_linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>{{ /if }}
                     </div>
                 </div>
-            </footer>
-            <!-- <!=== End-footer-section =====> -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end-footer-section -->

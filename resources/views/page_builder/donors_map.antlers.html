@@ -1,0 +1,23 @@
+<!-- Donors map -->
+<section class="our-donar">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="our-donar-head" data-aos="zoom-out-down">
+                    {{ if kicker }}<p class="wc-kicker">{{ kicker }}</p>{{ /if }}
+                    {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                    {{ if text }}<p>{{ text }}</p>{{ /if }}
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="donar-image" data-aos="zoom-out-up">
+                    {{ if map_image }}
+                    <img src="{{ map_image:url }}" alt="Donor Map">
+                    {{ else }}
+                    <img src="/assets/images/Donor Map.svg" alt="Donor Map">
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

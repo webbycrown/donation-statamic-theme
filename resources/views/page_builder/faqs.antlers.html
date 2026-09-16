@@ -1,0 +1,31 @@
+<!-- FAQs -->
+<div class="page faq-page">
+    <section class="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                    <div class="faq-title">
+                        {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="faq_wrapper faq_wrapper-sec">
+                        {{ collection:faqs sort="order:asc" }}
+                        <div class="faq_item faq_item-sec">
+                            <div class="faq_title">{{ title }}</div>
+                            <div class="faq_details" style="display: none;">
+                                <div class="accordion-content">
+                                    {{ content }}
+                                </div>
+                            </div>
+                        </div>
+                        {{ /collection:faqs }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

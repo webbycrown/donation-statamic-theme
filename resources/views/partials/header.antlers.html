@@ -5,7 +5,13 @@
             <div class="col-md-12 col-lg-12 col-xl-12 col-6 no-caret-1 ">
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <div class="logo no-caret">
-                        <a href="/"><img src="{{ if transparent_header }}/assets/images/logo.png{{ else }}/assets/images/black-logo.png{{ /if }}" alt="Donation"></a>
+                        <a href="/">
+                            {{ if transparent_header }}
+                            <img src="{{ global:setting_logo ?? '/assets/images/logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                            {{ else }}
+                            <img src="{{ global:setting_logo_dark ?? global:setting_logo ?? '/assets/images/black-logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                            {{ /if }}
+                        </a>
                     </div>
                     {{ partial:partials/menu-svg }}
                     <ul>
@@ -25,13 +31,19 @@
                         {{ /nav:header_menu }}
                     </ul>
                     <div class="wc-btn">
-                        <a href="/donation" class="btn btn-primary">Donate</a>
+                        <a href="{{ global:setting_cta_url ?? '/donation' }}" class="btn btn-primary">{{ global:setting_cta_label ?? 'Donate' }}</a>
                     </div>
                 </nav>
             </div>
             <div class="col-md-6 col-lg-3 col-xl-3 no-caret col-6">
                 <div class="logo no-caret-5">
-                    <a href="/"><img src="{{ if transparent_header }}/assets/images/logo.png{{ else }}/assets/images/black-logo.png{{ /if }}" alt="Donation"></a>
+                    <a href="/">
+                        {{ if transparent_header }}
+                        <img src="{{ global:setting_logo ?? '/assets/images/logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                        {{ else }}
+                        <img src="{{ global:setting_logo_dark ?? global:setting_logo ?? '/assets/images/black-logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                        {{ /if }}
+                    </a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 col-xl-2 no-caret-2 col-6">
@@ -39,7 +51,7 @@
                     <a href="javascript:;" class="mobile-nav-toggle"><i class="fa fa-bars"></i><i class="fa fa-xmark"></i></a>
                 </div>
                 <div class="col-md-3 col-sm-5 d-block d-lg-none wc-btn outer-box">
-                    <a href="/donation" class="btn btn-primary">Donate</a>
+                    <a href="{{ global:setting_cta_url ?? '/donation' }}" class="btn btn-primary">{{ global:setting_cta_label ?? 'Donate' }}</a>
                 </div>
             </div>
         </div>

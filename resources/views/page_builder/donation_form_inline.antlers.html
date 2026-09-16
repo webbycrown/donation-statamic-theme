@@ -1,0 +1,62 @@
+<!-- Donation form — inline with copy -->
+<div class="page">
+    <section class="wc-donation">
+        <div class="container p-0">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="donation-inner-box">
+                        {{ form:donation action="/!/forms/donation" ajax="true" class="js-donation-form js-amount-form" }}
+                        <div class="stay-connect-success donation-form-success" {{ unless success }}hidden{{ /unless }}>
+                            <span class="stay-connect-success__icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                            <h3>Donation received</h3>
+                            <p>Thank you for your support. We have received your donation details and emailed our team.</p>
+                        </div>
+                        <div class="stay-connect-fields" {{ if success }}hidden{{ /if }}>
+                            {{ if heading }}<h2 data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+                            <div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+                            <div class="donation-inner">
+                                {{ if image }}<img src="{{ image:url }}" alt="Donate" data-aos="flip-up" data-aos-duration="1500">{{ /if }}
+                                <div class="donation-st-inner">
+                                    <h3>Donation any amount</h3>
+                                    <div class="button">
+                                        <span>$</span>
+                                        <input type="text" class="form-control js-amount-input" name="amount" value="{{ old:amount ?? 25 }}" placeholder="25" required>
+                                    </div>
+                                    <h4>Select Payment Method</h4>
+                                    <label class="radio_btn">
+                                        <input type="radio" name="payment_method" value="Test Donation" {{ if !old:payment_method || old:payment_method == "Test Donation" }}checked{{ /if }} required>
+                                        <span class="list-item-label">Test Donation</span>
+                                    </label>
+                                    <label class="radio_btn">
+                                        <input type="radio" name="payment_method" value="Offline donation" {{ if old:payment_method == "Offline donation" }}checked{{ /if }}>
+                                        <span class="list-item-label">Offline donation</span>
+                                    </label>
+                                    <label class="radio_btn">
+                                        <input type="radio" name="payment_method" value="Credit Card" {{ if old:payment_method == "Credit Card" }}checked{{ /if }}>
+                                        <span class="list-item-label">Credit Card</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="personal-info">
+                                <h4>Personal info</h4>
+                                <div class="nema-and-number">
+                                    <input type="text" class="form-control" name="first_name" value="{{ old:first_name }}" placeholder="First name" required>
+                                    <input type="text" class="form-control" name="last_name" value="{{ old:last_name }}" placeholder="Last name" required>
+                                </div>
+                                <input type="email" class="form-control" name="email" value="{{ old:email }}" placeholder="Email Address" required>
+                                <div class="btn-text js-donation-total">Donation Total : $25</div>
+                                <div class="wc-btn">
+                                    <button type="submit" class="btn btn-primary">
+                                        <span class="btn-label">Donate</span>
+                                        <span class="btn-loading" hidden>Sending…</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /form:donation }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

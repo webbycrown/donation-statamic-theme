@@ -1,0 +1,6 @@
+<!-- Map embed -->
+{{ if map_embed || global:setting_map_embed }}
+<div class="map-box">
+    <iframe src="{{ map_embed ?? global:setting_map_embed }}" style="border:0; width:100%; height:450px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+{{ /if }}

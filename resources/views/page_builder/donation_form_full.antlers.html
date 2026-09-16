@@ -1,0 +1,77 @@
+<!-- Donation form — full / detailed -->
+<div class="page">
+    <section class="wc-donation-form">
+        <div class="container p-0">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="inner-success">
+                        {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                        {{ form:donation action="/!/forms/donation" ajax="true" class="js-donation-form js-amount-form" }}
+                        <div class="stay-connect-success donation-form-success" {{ unless success }}hidden{{ /unless }}>
+                            <span class="stay-connect-success__icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                            <h3>Donation received</h3>
+                            <p>Thank you for your support. We have received your donation details and emailed our team.</p>
+                        </div>
+                        <div class="stay-connect-fields" {{ if success }}hidden{{ /if }}>
+                            <div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+                            <div class="inner-input">
+                                <label>Donate to</label>
+                                <input type="text" class="form-control" name="donate_to" value="{{ old:donate_to }}" placeholder="Cause or campaign">
+                            </div>
+                            <div class="wc-amount js-amount-picks">
+                                <p>Pick a donation amount</p>
+                                <a href="#" data-amount="25" class="is-active"><p>$ 25</p></a>
+                                <a href="#" data-amount="50"><p>$ 50</p></a>
+                                <a href="#" data-amount="100"><p>$ 100</p></a>
+                                <a href="#" data-amount="1000"><p>$ 1000</p></a>
+                                <a href="#" data-amount="custom"><p>custom amount</p></a>
+                                <input type="hidden" name="amount" value="25" class="js-amount-value">
+                                <input type="text" class="form-control js-custom-amount" placeholder="Enter custom amount" hidden>
+                            </div>
+                            <div class="donation-Occurence">
+                                <h3>Donation Occurence</h3>
+                                <label class="radio_btn">
+                                    <input type="radio" name="occurrence" value="One time donation" checked>
+                                    <span class="list-item-label">One time donation</span>
+                                </label>
+                                <label class="radio_btn">
+                                    <input type="radio" name="occurrence" value="Recurring donation">
+                                    <span class="list-item-label">Recurring donation</span>
+                                </label>
+                            </div>
+                            <h4>Select Payment Method</h4>
+                            <label class="radio_btn">
+                                <input type="radio" name="payment_method" value="Test Donation" checked required>
+                                <span class="list-item-label">Test Donation</span>
+                            </label>
+                            <label class="radio_btn">
+                                <input type="radio" name="payment_method" value="Offline donation">
+                                <span class="list-item-label">Offline donation</span>
+                            </label>
+                            <label class="radio_btn">
+                                <input type="radio" name="payment_method" value="Credit Card">
+                                <span class="list-item-label">Credit Card</span>
+                            </label>
+                            <div class="personal-info">
+                                <h4>Personal info</h4>
+                                <div class="nema-and-number">
+                                    <input type="text" class="form-control" name="first_name" value="{{ old:first_name }}" placeholder="First name" required>
+                                    <input type="text" class="form-control" name="last_name" value="{{ old:last_name }}" placeholder="Last name" required>
+                                </div>
+                                <input type="email" class="form-control" name="email" value="{{ old:email }}" placeholder="Email Address" required>
+                                <div class="btn-text js-donation-total">Donation Total : $25</div>
+                                <div class="wc-btn">
+                                    <button type="submit" class="btn btn-primary">
+                                        <span class="btn-label">Donate</span>
+                                        <span class="btn-loading" hidden>Sending…</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /form:donation }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

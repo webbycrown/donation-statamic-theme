@@ -1,0 +1,879 @@
+title: Page builder
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: Theme sections
+      instructions: One page template. Add any section here and drag to reorder.
+      button_label: Add section
+      collapse: accordion
+      sets:
+        content:
+          display: Content
+          sets:
+            home_hero_one:
+              display: 'Home hero — style one'
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: Get help now
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                    default: /help-me
+                -
+                  handle: video_url
+                  field:
+                    type: text
+                    display: Watch video URL
+                -
+                  handle: hero_image
+                  field:
+                    type: assets
+                    display: Hero image
+                    container: assets
+                    max_files: 1
+
+            home_hero_two:
+              display: 'Home hero — style two'
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Intro text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: Get help now
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                    default: /help-me
+                -
+                  handle: video_url
+                  field:
+                    type: text
+                    display: Watch video URL
+                -
+                  handle: hero_image
+                  field:
+                    type: assets
+                    display: Hero image
+                    container: assets
+                    max_files: 1
+
+            home_hero_three:
+              display: 'Home hero — style three'
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Intro text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: Get help now
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                    default: /help-me
+                -
+                  handle: video_url
+                  field:
+                    type: text
+                    display: Watch video URL
+
+            about_intro:
+              display: About intro
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text_col_one
+                  field:
+                    type: markdown
+                    display: Left text
+                    automatic_line_breaks: true
+                -
+                  handle: text_col_two
+                  field:
+                    type: markdown
+                    display: Right text
+                    automatic_line_breaks: true
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+
+            about_section:
+              display: About section (two-column)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                -
+                  handle: images
+                  field:
+                    type: assets
+                    display: Images (2)
+                    container: assets
+                    max_files: 2
+
+            help_me_intro:
+              display: Help me intro
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body text
+                    automatic_line_breaks: true
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: cta_heading
+                  field:
+                    type: text
+                    display: CTA heading
+                -
+                  handle: cta_text
+                  field:
+                    type: textarea
+                    display: CTA text
+                -
+                  handle: cta_label
+                  field:
+                    type: text
+                    display: CTA button label
+                    default: Donate
+                -
+                  handle: cta_url
+                  field:
+                    type: text
+                    display: CTA button URL
+                    default: /donation
+
+            help_stories:
+              display: Help stories
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                -
+                  handle: story_heading
+                  field:
+                    type: text
+                    display: Story heading
+                -
+                  handle: story_image
+                  field:
+                    type: assets
+                    display: Story image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: story_body
+                  field:
+                    type: markdown
+                    display: Story body
+                    automatic_line_breaks: true
+                -
+                  handle: donate_heading
+                  field:
+                    type: text
+                    display: Donate banner heading
+                -
+                  handle: donate_text
+                  field:
+                    type: textarea
+                    display: Donate banner text
+
+            donate_banner:
+              display: Donate banner (image + text)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: markdown
+                    display: Text
+                    automatic_line_breaks: true
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Main image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: video_url
+                  field:
+                    type: text
+                    display: Video URL (optional)
+
+            donate_causes:
+              display: Donate causes (home two)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: markdown
+                    display: Text
+                    automatic_line_breaks: true
+                -
+                  handle: video_url
+                  field:
+                    type: text
+                    display: Video URL (optional)
+                -
+                  handle: images
+                  field:
+                    type: assets
+                    display: Images
+                    container: assets
+                    max_files: 4
+
+            donation_form_inline:
+              display: Donation form (inline with copy)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Form heading
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Form side image
+                    container: assets
+                    max_files: 1
+
+            donation_form_full:
+              display: Donation form (full / detailed)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Form heading
+                    default: Make a Donation
+
+            donation_copy:
+              display: Donation copy
+              fields:
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Copy
+                    automatic_line_breaks: true
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+
+            donation_success_message:
+              display: Donation success message
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Thank you for your support
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                    automatic_line_breaks: true
+                -
+                  handle: cta_label
+                  field:
+                    type: text
+                    display: CTA button label
+                    default: Back to home
+                -
+                  handle: cta_url
+                  field:
+                    type: text
+                    display: CTA button URL
+                    default: /
+
+            volunteer_cta:
+              display: Volunteer CTA
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: Become a volunteer
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                    default: /become-volunteer
+
+            volunteer_intro:
+              display: Volunteer intro
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Intro text
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                    automatic_line_breaks: true
+                -
+                  handle: images
+                  field:
+                    type: assets
+                    display: Images
+                    container: assets
+                    max_files: 2
+
+            volunteer_apply_form:
+              display: Volunteer apply form
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Become a volunteer
+                -
+                  handle: intro
+                  field:
+                    type: markdown
+                    display: Intro text
+                    automatic_line_breaks: true
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Side image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: quote
+                  field:
+                    type: textarea
+                    display: Testimonial quote
+                -
+                  handle: quote_author
+                  field:
+                    type: text
+                    display: Quote author
+                -
+                  handle: quote_role
+                  field:
+                    type: text
+                    display: Quote author role
+                -
+                  handle: quote_image
+                  field:
+                    type: assets
+                    display: Quote author image
+                    container: assets
+                    max_files: 1
+
+            why_choose:
+              display: Why choose us
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: items
+                  field:
+                    type: grid
+                    display: Items
+                    fields:
+                      -
+                        handle: icon
+                        field:
+                          type: text
+                          display: Icon class (FA)
+                      -
+                        handle: heading
+                        field:
+                          type: text
+                          display: Heading
+                      -
+                        handle: text
+                        field:
+                          type: textarea
+                          display: Text
+
+            donors_map:
+              display: Donors map
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: map_image
+                  field:
+                    type: assets
+                    display: Map image
+                    container: assets
+                    max_files: 1
+
+            stay_connect:
+              display: Stay connected (newsletter)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Stay connect with us
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+
+            contact_form:
+              display: Contact form
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Contact Us
+
+            map_embed:
+              display: Map embed
+              fields:
+                -
+                  handle: map_embed
+                  field:
+                    type: text
+                    display: Map embed URL
+                    instructions: Paste the src URL from a Google Maps embed iframe.
+
+            page_hero:
+              display: Page hero banner
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Background image
+                    container: assets
+                    max_files: 1
+
+            what_we_do:
+              display: What we do
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                    automatic_line_breaks: true
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Full-width image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: body_two
+                  field:
+                    type: markdown
+                    display: Body (right column)
+                    automatic_line_breaks: true
+
+            career_intro:
+              display: Career intro
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Career
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Intro text
+                -
+                  handle: body
+                  field:
+                    type: textarea
+                    display: Body paragraph
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+
+            presentation_hero:
+              display: Presentation hero
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: Explore now
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                    default: '#prebuild'
+                -
+                  handle: video_url
+                  field:
+                    type: text
+                    display: Video URL
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Hero image
+                    container: assets
+                    max_files: 1
+
+            text_section:
+              display: Text section
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Text
+                    automatic_line_breaks: true
+
+        listings:
+          display: Listings
+          sets:
+            news_feature:
+              display: News feature (home)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: limit
+                  field:
+                    type: integer
+                    display: Number of items
+                    default: 3
+
+            news_listing:
+              display: News listing
+              fields:
+                -
+                  import: section_heading
+
+            events_listing:
+              display: Events listing (home two)
+              fields:
+                -
+                  import: section_heading
+
+            events_cards:
+              display: Events cards (home three)
+              fields:
+                -
+                  import: section_heading
+
+            blogs_feature:
+              display: Blog feature (home)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: limit
+                  field:
+                    type: integer
+                    display: Number of items
+                    default: 3
+
+            blogs_list:
+              display: Blog list (standard)
+              fields:
+                -
+                  import: section_heading
+
+            blogs_grid:
+              display: Blog grid
+              fields:
+                -
+                  import: section_heading
+
+            blogs_three:
+              display: Blog (home three style)
+              fields:
+                -
+                  import: section_heading
+
+            portfolio_gallery:
+              display: Portfolio gallery (chariti strip)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: show_instagram_icon
+                  field:
+                    type: toggle
+                    display: Show Instagram icon
+                    default: true
+
+            portfolio_grid:
+              display: Portfolio grid
+              fields:
+                -
+                  import: section_heading
+
+            volunteers_grid:
+              display: Volunteers grid (home two)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: limit
+                  field:
+                    type: integer
+                    display: Number of items
+                    default: 4
+
+            volunteers_listing:
+              display: Volunteers listing
+              fields:
+                -
+                  import: section_heading
+
+            volunteers_showcase:
+              display: Volunteers showcase (home three)
+              fields:
+                -
+                  import: section_heading
+
+            testimonials_slider:
+              display: Testimonials slider
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section label
+
+            testimonials_grid:
+              display: Testimonials grid
+              fields:
+                -
+                  import: section_heading
+
+            testimonials_three:
+              display: Testimonials (home three style)
+              fields:
+                -
+                  import: section_heading
+
+            partners:
+              display: Partners / sponsors
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: logos
+                  field:
+                    type: assets
+                    display: Partner logos
+                    container: assets
+
+            partners_three:
+              display: Partners (home three style)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: logos
+                  field:
+                    type: assets
+                    display: Partner logos
+                    container: assets
+
+            faqs:
+              display: FAQs
+              fields:
+                -
+                  import: section_heading
+
+            careers_listing:
+              display: Careers listing
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: lets_join_heading
+                  field:
+                    type: text
+                    display: "\"Let's join\" heading"
+                -
+                  handle: lets_join_text
+                  field:
+                    type: textarea
+                    display: "\"Let's join\" text"
+
+            pages_index:
+              display: Pages index
+              fields:
+                -
+                  import: section_heading
+
+            donation_timeline:
+              display: Donation timeline
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: items
+                  field:
+                    type: grid
+                    display: Timeline items
+                    fields:
+                      -
+                        handle: year
+                        field:
+                          type: text
+                          display: Year / label
+                      -
+                        handle: amount
+                        field:
+                          type: text
+                          display: Amount raised
+                      -
+                        handle: description
+                        field:
+                          type: textarea
+                          display: Description

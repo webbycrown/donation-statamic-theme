@@ -1,0 +1,29 @@
+<!-- Events cards (home three style) -->
+<section class="event-three">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="event-three-head" data-aos="flip-left">
+                    {{ if kicker }}<p class="wc-kicker">{{ kicker }}</p>{{ /if }}
+                    {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{ collection:events limit="4" }}
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="event-three-info">
+                    <div class="event-three-image" data-aos="flip-left">
+                        <img src="{{ if image }}{{ image }}{{ else }}/assets/images/event-three01.jpg{{ /if }}" alt="{{ title }}">
+                    </div>
+                    <div class="event-three-text">
+                        <span class="date">{{ event_date ?? date format="d M,Y" }}</span>
+                        <h4><a href="{{ url }}">{{ title }}</a></h4>
+                        <a href="{{ url }}" class="btn btn-primary">View Events</a>
+                    </div>
+                </div>
+            </div>
+            {{ /collection:events }}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+<!-- Blog list (standard) -->
+<div class="page standard-blog-page">
+    <section class="latest-blog-three blog-standard">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                    <div class="latest-blog-title spacing-margin blog-standard-center">
+                        <div class="title-wrap">
+                            {{ if heading }}<h2 class="wc-sub-title">{{ heading }}</h2>{{ /if }}
+                        </div>
+                    </div>
+                    <div class="latest-blog-three-wrap blog-standard-wrap">
+                        {{ collection:blogs sort="date:desc" as="posts" }}
+                        {{ posts }}
+                        <div class="latest-blog-three-info js-blog-standard-card{{ if count > 6 }} is-hidden{{ /if }}">
+                            <div class="latest-blog-three-image">
+                                <a href="{{ url }}"><img src="{{ image:url ?? '/assets/images/blog-standard01.jpg' }}" alt="{{ title }}"></a>
+                            </div>
+                            <div class="event-three-text blog-standard-text">
+                                <p><span>{{ date format="d M, Y" }}</span></p>
+                                <h6>{{ title }}</h6>
+                                <a href="{{ url }}">Read more</a>
+                            </div>
+                        </div>
+                        {{ /posts }}
+                        {{ /collection:blogs }}
+                    </div>
+                </div>
+            </div>
+            {{ collection:blogs as="posts" }}
+            {{ if total_results > 6 }}
+            <div class="row">
+                <div class="col-12">
+                    <div class="load-btn">
+                        <a href="#" class="big-btn btn btn-primary mx-auto js-load-more" data-cards=".js-blog-standard-card" data-batch="2">Load More<span class="loader-01"></span></a>
+                    </div>
+                </div>
+            </div>
+            {{ /if }}
+            {{ /collection:blogs }}
+        </div>
+    </section>
+</div>

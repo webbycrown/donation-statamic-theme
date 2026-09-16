@@ -1,0 +1,20 @@
+<!-- Partners (home three style) -->
+{{ if logos }}
+<section class="partners-section partners-three" style="padding: 60px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                {{ if heading }}<h2 class="wc-sub-title text-center" data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center" style="margin-top:32px;">
+            {{ logos }}
+            <div class="col-6 col-md-4 col-lg-3 text-center" data-aos="fade-up">
+                <img src="{{ url }}" alt="Partner" style="max-height:80px; width:auto; margin-bottom:20px;">
+            </div>
+            {{ /logos }}
+        </div>
+    </div>
+</section>
+{{ /if }}

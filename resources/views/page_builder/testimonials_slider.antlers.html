@@ -1,0 +1,46 @@
+<!-- Testimonials slider -->
+<div class="our-latest-news-section our-latest-news-section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                {{ if heading }}<div class="people-says"><h2>{{ heading }}</h2></div>{{ /if }}
+                <div class="swiper mySwiper" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="swiper-wrapper">
+                        {{ collection:testimonials sort="date:asc" }}
+                        <div class="swiper-slide">
+                            <div class="people">
+                                <div class="people-says-testimonial">
+                                    <div class="people-testimonial-box">
+                                        {{ if image }}
+                                        <div class="people-image">
+                                            <img src="{{ image:url }}" alt="{{ title }}">
+                                        </div>
+                                        {{ /if }}
+                                        <div class="people-testimonial">
+                                            <div class="people-image-grid">
+                                                <a href="javascript:;">{{ title }}</a>
+                                                {{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
+                                            </div>
+                                            <div class="people-quotes">
+                                                <div class="people-quotes-image">
+                                                    <img src="/assets/images/Vector (9).png" alt="">
+                                                </div>
+                                                <p>{{ content | strip_tags | truncate:260 }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /collection:testimonials }}
+                    </div>
+                </div>
+                <div class="slider-arrow dark" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+                    <div class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

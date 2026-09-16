@@ -1,0 +1,56 @@
+<!-- Careers listing -->
+<div class="page career-page">
+    <div class="wc-donation-form career-apply-popup mfp-hide" id="test-form">
+        <div class="inner-success career-apply-form">
+            <h2>Career Apply Form</h2>
+            {{ partial:partials/career-apply-form }}
+        </div>
+    </div>
+
+    {{ if lets_join_heading }}
+    <section class="lets-join">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="lets-head">
+                        {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                        <h2>{{ lets_join_heading }}</h2>
+                        {{ if lets_join_text }}<p>{{ lets_join_text }}</p>{{ /if }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ /if }}
+
+    <section class="lets-join">
+        <div class="container">
+            <div class="row js-career-list">
+                {{ collection:careers as="jobs" }}
+                {{ jobs }}
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 js-career-card{{ if count > 6 }} is-hidden{{ /if }}">
+                    <div class="lets-wrap">
+                        <h6>{{ title }}</h6>
+                        <p class="lets-wrap-para">{{ excerpt ?? "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque." }}</p>
+                        <p class="lets-wrap-time">{{ hours ?? "Full Time / Part Time" }}</p>
+                        <p class="lets-wrap-nub">{{ schedule ?? "09:00 am To 06:00 pm" }}</p>
+                        <a href="#test-form" class="popup-with-form" data-role="{{ title }}">Apply now</a>
+                    </div>
+                </div>
+                {{ /jobs }}
+                {{ /collection:careers }}
+            </div>
+            {{ collection:careers as="jobs" }}
+            {{ if total_results > 6 }}
+            <div class="row">
+                <div class="col-12">
+                    <div class="view-all-btn">
+                        <a href="#" class="big-btn btn btn-primary mx-auto js-career-load-more js-load-more" data-cards=".js-career-card" data-batch="3">Load more <span class="loader-01"></span></a>
+                    </div>
+                </div>
+            </div>
+            {{ /if }}
+            {{ /collection:careers }}
+        </div>
+    </section>
+</div>

@@ -1,0 +1,31 @@
+<!-- Help me intro -->
+<section class="wc-help-me">
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-help-content">
+                    {{ if heading }}<h2 class="title" data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+                    <div class="help-me-wrapper">
+                        {{ if image }}
+                        <div class="help-me-image">
+                            <img src="{{ image:url }}" alt="{{ heading }}" data-aos="flip-left" data-aos-duration="1500">
+                        </div>
+                        {{ /if }}
+                        {{ if body }}
+                        <div class="help-me-p">{{ body }}</div>
+                        {{ /if }}
+                    </div>
+                </div>
+                {{ if cta_heading }}
+                <div class="bredcum" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="bredcum-content">
+                        <h2>{{ cta_heading }}</h2>
+                        {{ if cta_text }}<p>{{ cta_text }}</p>{{ /if }}
+                    </div>
+                    <a href="{{ cta_url ?? '/donation' }}" class="btn btn-primary">{{ cta_label ?? 'Donate' }}</a>
+                </div>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</section>

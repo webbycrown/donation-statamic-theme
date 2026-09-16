@@ -1,0 +1,27 @@
+<!-- What we do -->
+<section class="what-we">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wc-what-we">
+                    {{ if heading }}<h2 data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+                    {{ if body }}{{ body }}{{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ if image || body_two }}
+<div class="main-wc-what">
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="wc-what-inner">
+                    {{ if image }}<img src="{{ image:url }}" alt="{{ heading }}" data-aos="zoom-in-up" data-aos-duration="1500">{{ /if }}
+                    {{ if body_two }}<div class="what-we-p">{{ body_two }}</div>{{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ /if }}

@@ -1,0 +1,31 @@
+<!-- Volunteers showcase (home three) -->
+<section class="volunteers">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                <div class="volunteers-team-title">
+                    {{ if heading }}<h2 data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="volunteer-grid-wrapper spacing-margin">
+                    {{ collection:volunteers sort="date:asc" limit="4" }}
+                    <div class="volunteer-info">
+                        <a href="javascript:;" class="image-wrap">
+                            <img src="{{ image:url ?? '/assets/images/volunteer-1.jpg' }}" alt="{{ title }}">
+                        </a>
+                        <div class="volunteer-content">
+                            <h4>{{ title }}</h4>
+                            <p>{{ excerpt ?? 'Volunteer' }}</p>
+                            {{ partial:partials/volunteer-social }}
+                        </div>
+                    </div>
+                    {{ /collection:volunteers }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

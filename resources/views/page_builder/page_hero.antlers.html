@@ -1,0 +1,12 @@
+<!-- Page hero banner -->
+<section class="wc-about-us">
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="wc-about-bg" {{ if image }}style="background-image: url({{ image:url }});"{{ else }}style="background-image: url(/assets/images/about-us.png);"{{ /if }}>
+                    {{ if heading }}<h2 data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+<!-- Help stories -->
+{{ if heading }}
+<section class="as-donation">
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-12 p-0">
+                <h2 data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>
+            </div>
+        </div>
+    </div>
+</section>
+{{ /if }}
+{{ if story_heading }}
+<div class="wc-story-info">
+    <div class="container">
+        <h2 data-aos="fade-up" data-aos-duration="1500">{{ story_heading }}</h2>
+        <div class="story-wrapper">
+            {{ if story_image }}
+            <div class="story-image" data-aos="flip-left" data-aos-duration="1500">
+                <img src="{{ story_image:url }}" alt="{{ story_heading }}">
+            </div>
+            {{ /if }}
+            {{ if story_body }}
+            <div class="story-content">{{ story_body }}</div>
+            {{ /if }}
+        </div>
+    </div>
+</div>
+{{ /if }}
+{{ if donate_heading }}
+<div class="bredcum" data-aos="fade-up" data-aos-duration="1500">
+    <div class="bredcum-content">
+        <h2>{{ donate_heading }}</h2>
+        {{ if donate_text }}<p>{{ donate_text }}</p>{{ /if }}
+    </div>
+    <a href="/donation" class="btn btn-primary">Donate</a>
+</div>
+{{ /if }}

@@ -16,8 +16,6 @@ tabs:
           field:
             type: text
             display: Last Name
-            validate:
-              - required
         -
           handle: email
           field:
@@ -30,8 +28,6 @@ tabs:
           field:
             type: text
             display: Phone
-            validate:
-              - required
         -
           handle: message
           field:

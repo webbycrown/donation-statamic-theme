@@ -1,0 +1,44 @@
+<!-- Donate causes (home two) -->
+<section class="donate-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</p>{{ /if }}
+                {{ if heading }}
+                <div class="donate-title spacing-margin text-center">
+                    <h2 data-aos="fade-up" data-aos-duration="1500" class="wc-sub-title">{{ heading }}</h2>
+                </div>
+                {{ /if }}
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-sm-12">
+                {{ if images }}
+                <div class="donate-image-wrap">
+                    {{ images limit="1" }}
+                    <div class="video-img">
+                        {{ if video_url }}
+                        <button class="mouse-scroll lets-play btn-watch-video" data-video="{{ video_url }}" data-aos="fade-up" data-aos-duration="1500">
+                            <span class="mouse"><i class="fa fa-play"></i></span>
+                        </button>
+                        {{ /if }}
+                        <img src="{{ url }}" alt="{{ heading }}">
+                    </div>
+                    {{ /images }}
+                    {{ images offset="1" }}
+                    <div class="image-column">
+                        <div class="wc-story"><p>Donate <br>Today</p></div>
+                        <img class="img-{{ index }}" src="{{ url }}" alt="{{ heading }}">
+                    </div>
+                    {{ /images }}
+                </div>
+                {{ /if }}
+            </div>
+            <div class="col-xl-6 col-sm-12">
+                {{ if text }}
+                <div class="donate-text">{{ text }}</div>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</section>

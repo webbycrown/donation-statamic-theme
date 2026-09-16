@@ -3,25 +3,31 @@
         <div class="row align-items-center">
             <div class="col-lg-5 col-4">
                 <div class="official-info-three">
-                    <a href="mailto:donation39@gmail.com" class="official-info-wrap">
+                    {{ if global:setting_email }}
+                    <a href="mailto:{{ global:setting_email }}" class="official-info-wrap">
                         <i class="fa-solid fa-envelope"></i>
-                        <p>donation39@gmail.com</p>
+                        <p>{{ global:setting_email }}</p>
                     </a>
-                    <a href="tel:+5485246544954" class="official-info-wrap">
+                    {{ /if }}
+                    {{ if global:setting_phone }}
+                    <a href="tel:{{ global:setting_phone }}" class="official-info-wrap">
                         <i class="fa-solid fa-phone"></i>
-                        <p>+548 524 6544 954</p>
+                        <p>{{ global:setting_phone }}</p>
                     </a>
+                    {{ /if }}
                 </div>
             </div>
             <div class="col-lg-2 col-4">
-                <a href="/" class="header-logo-three"><img src="/assets/images/logo.png" alt="Donation"></a>
+                <a href="/" class="header-logo-three">
+                    <img src="{{ global:setting_logo ?? '/assets/images/logo.png' }}" alt="{{ global:setting_site_name ?? 'Donation' }}">
+                </a>
             </div>
             <div class="col-lg-5 col-4">
                 <div class="social-icon-three">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    {{ if global:setting_facebook }}<a href="{{ global:setting_facebook }}" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>{{ /if }}
+                    {{ if global:setting_instagram }}<a href="{{ global:setting_instagram }}" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>{{ /if }}
+                    {{ if global:setting_linkedin }}<a href="{{ global:setting_linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>{{ /if }}
+                    {{ if global:setting_twitter }}<a href="{{ global:setting_twitter }}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>{{ /if }}
                 </div>
             </div>
         </div>
@@ -54,7 +60,7 @@
                             {{ /nav:header_menu }}
                         </ul>
                     </nav>
-                    <a href="/donation" class="donate-btn">Donate</a>
+                    <a href="{{ global:setting_cta_url ?? '/donation' }}" class="donate-btn">{{ global:setting_cta_label ?? 'Donate' }}</a>
                 </div>
             </div>
         </div>

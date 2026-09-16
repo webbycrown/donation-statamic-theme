@@ -1,0 +1,27 @@
+<!-- Events listing (home two style) -->
+<section class="upcoming-events upcoming-events-second">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                <div class="events-title spacing-margin event-title-center">
+                    {{ if heading }}<h2 data-aos="fade-up" data-aos-duration="1500" class="wc-sub-title">{{ heading }}</h2>{{ /if }}
+                </div>
+                <div class="upcoming-events-wrapper spacing-margin">
+                    {{ collection:events }}
+                    <div class="events-info">
+                        <a href="{{ url }}" class="event-img">
+                            <img src="{{ if image }}{{ image }}{{ else }}/assets/images/event-1.jpg{{ /if }}" alt="{{ title }}">
+                        </a>
+                        <div class="events-content">
+                            <span class="date">{{ event_date ?? date format="d M,Y" }}</span>
+                            <h4><a href="{{ url }}">{{ title }}</a></h4>
+                            <a href="{{ url }}" class="btn btn-primary">View Events</a>
+                        </div>
+                    </div>
+                    {{ /collection:events }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

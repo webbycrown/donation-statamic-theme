@@ -1,0 +1,40 @@
+<!-- Career intro -->
+<section class="career">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="career-top">
+                    <div class="career-head">
+                        {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                        {{ if text }}<p class="career-first-para">{{ text }}</p>{{ /if }}
+                    </div>
+                </div>
+            </div>
+            {{ if image }}
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="career-image">
+                    <img src="{{ image:url }}" alt="{{ heading }}">
+                </div>
+            </div>
+            {{ /if }}
+        </div>
+    </div>
+</section>
+{{ if body }}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="career-sec-para">{{ body }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+<div class="wc-donation-form career-apply-popup mfp-hide" id="test-form">
+    <div class="inner-success career-apply-form">
+        <h2>Career Apply Form</h2>
+        {{ partial:partials/career-apply-form }}
+    </div>
+</div>

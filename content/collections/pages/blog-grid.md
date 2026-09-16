@@ -2,5 +2,10 @@
 id: blog-grid
 blueprint: pages
 title: 'Blog Grid'
-template: blog-grid
+template: page
+page_builder:
+  -
+    id: blog-grid-page
+    type: blogs_grid
+    heading: 'Blog Grid'
 ---

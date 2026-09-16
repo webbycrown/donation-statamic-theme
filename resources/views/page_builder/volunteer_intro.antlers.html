@@ -1,0 +1,29 @@
+<!-- Volunteer intro -->
+<section class="volunteers">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="volunteers-title">
+                    {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                    {{ if text }}<p>{{ text }}</p>{{ /if }}
+                </div>
+            </div>
+        </div>
+        {{ if images }}
+        <div class="row">
+            <div class="col-12">
+                <div class="volunteers-image-wrap">
+                    {{ images }}
+                    <div class="volunteers-image-grid">
+                        <img src="{{ url }}" alt="{{ heading }}">
+                    </div>
+                    {{ /images }}
+                </div>
+                {{ if body }}
+                <div class="volunteers-image-text">{{ body }}</div>
+                {{ /if }}
+            </div>
+        </div>
+        {{ /if }}
+    </div>
+</section>

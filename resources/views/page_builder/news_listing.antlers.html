@@ -1,0 +1,27 @@
+<!-- News listing -->
+<div class="page">
+    <section class="wc-news">
+        <div class="container p-0">
+            <div class="row">
+                <div class="col-12 p-0">
+                    {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                    <div class="news-title">
+                        {{ if heading }}<h2 data-aos="fade-down" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+                    </div>
+                    <div class="news-wrapper">
+                        {{ collection:news sort="date:desc" }}
+                        <div class="news-content" data-aos="zoom-in" data-aos-duration="1500">
+                            <a href="{{ url }}"><img src="{{ if image }}{{ image }}{{ else }}/assets/images/news-1.png{{ /if }}" alt="{{ title }}"></a>
+                            <div class="date">
+                                <p>{{ date format="d M,Y" }}</p>
+                                <a href="{{ url }}"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                            <h2><a href="{{ url }}">{{ title }}</a></h2>
+                        </div>
+                        {{ /collection:news }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

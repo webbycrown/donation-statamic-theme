@@ -1,0 +1,42 @@
+<!-- Volunteers listing -->
+<div class="page volunteers-page">
+    <section class="volunteers">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                    <div class="volunteers-title">
+                        {{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="volunteer-grid-wrapper spacing-margin">
+                        {{ collection:volunteers sort="date:asc" as="people" }}
+                        {{ people }}
+                        <div class="volunteer-info js-volunteer-card{{ if count > 4 }} is-hidden{{ /if }}">
+                            <a href="javascript:;" class="image-wrap">
+                                <img src="{{ image:url ?? '/assets/images/volunteer-1.jpg' }}" alt="{{ title }}">
+                            </a>
+                            <div class="volunteer-content">
+                                <h4><a href="javascript:;">{{ title }}</a></h4>
+                                <p>{{ excerpt ?? 'Volunteer' }}</p>
+                                {{ partial:partials/volunteer-social }}
+                            </div>
+                        </div>
+                        {{ /people }}
+                        {{ /collection:volunteers }}
+                    </div>
+                    {{ collection:volunteers as="people" }}
+                    {{ if total_results > 4 }}
+                    <div class="view-all-btn">
+                        <a href="#" class="big-btn btn btn-primary mx-auto js-load-more" data-cards=".js-volunteer-card" data-batch="4">Load more <span class="loader-01"></span></a>
+                    </div>
+                    {{ /if }}
+                    {{ /collection:volunteers }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

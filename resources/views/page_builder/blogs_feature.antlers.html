@@ -1,0 +1,36 @@
+<!-- Blog feature (home) — testimonial-style slider -->
+<div class="our-latest-news-section our-latest-news-section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ if kicker }}<p class="wc-kicker" data-aos="fade-up">{{ kicker }}</p>{{ /if }}
+                {{ if heading }}<h2 class="wc-sub-title text-center" data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+                <div class="latest-news-slider">
+                    <div class="swiper mySwiper" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="swiper-wrapper">
+                            {{ collection:blogs sort="date:desc" limit="{ limit ?? 6 }" }}
+                            <div class="swiper-slide">
+                                <div class="latest-news-box">
+                                    {{ if image }}
+                                    <a href="{{ url }}" class="view-blog-image">
+                                        <img src="{{ image:url }}" alt="{{ title }}" style="width:100%; aspect-ratio:16/9; object-fit:cover;">
+                                    </a>
+                                    {{ /if }}
+                                    <div class="latest-news-content">
+                                        <p>{{ excerpt ?? content | strip_tags | truncate:160 }}</p>
+                                        <h3><a href="{{ url }}">{{ title }}</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ /collection:blogs }}
+                        </div>
+                    </div>
+                    <div class="slider-arrow" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+                        <div class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,2 +1,8 @@
 title: Volunteer
 honeypot: honeypot
+email:
+  -
+    to: admin@example.com
+    reply_to: '{{ email }}'
+    subject: 'Volunteer request from {{ first_name }}'
+    html: emails/contact
